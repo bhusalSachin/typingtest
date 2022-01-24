@@ -47,8 +47,9 @@ const TypeArea = ({ checkComplete }) => {
         placeholder="Click on the button below to start typing!"
         defaultValue={null}
         readOnly={isDone || !isStarted}
-        onBlur={() => {
-          textAreaRef.current.setSelectionRange(0, 0);
+        onPaste={(e) => {
+          e.preventDefault();
+          return false;
         }}
         onChange={(e) => {
           setWords({ ...words, typedWords: e.target.value });
