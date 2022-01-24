@@ -1,0 +1,12 @@
+.countdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.countdown span {
+  font-size: 3rem;
+  color: rgb(155, 106, 106);
+}

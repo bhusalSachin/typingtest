@@ -1,0 +1,23 @@
+.home {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  background-color: #f8f8f8;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 20%;
+  font-style: italic;
+  color: rgb(155, 106, 106);
+}
+
+.middle {
+  width: 70%;
+  flex: 1;
+  position: relative;
+}
