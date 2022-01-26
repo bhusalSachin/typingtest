@@ -27,7 +27,7 @@ const Land = ({ onRoomEntry }) => {
     //   username: input.username,
     // });
     const response = await axios.post(
-      "http://typingtestserver.herokuapp.com/checkId",
+      "https://typingtestserver.herokuapp.com/checkId",
       {
         roomId: input.id,
         username: input.username,
