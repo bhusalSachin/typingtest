@@ -11,7 +11,11 @@ export const SocketProvider = ({ id, children }) => {
   const [socket, setSocket] = useState();
 
   useEffect(() => {
-    const newSocket = io("http://localhost:5000/", {
+    // const newSocket = io("http://localhost:5000/", {
+    //   transports: ["websocket"],
+    //   query: { id },
+    // });
+    const newSocket = io("http://typingtestserver.herokuapp.com/", {
       transports: ["websocket"],
       query: { id },
     });
