@@ -1,0 +1,31 @@
+.player {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d3d3d3;
+}
+
+.player-body {
+  height: 100%;
+  flex: 1;
+  border: 1px solid green;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.player-body div:first-child {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 800;
+  color: rgb(121, 52, 52);
+}
+
+.player-side {
+  height: 100%;
+  width: 20%;
+  border: 1px solid black;
+  box-shadow: 1px 5px 4px 6px black;
+}

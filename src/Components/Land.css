@@ -1,0 +1,42 @@
+.land {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #d3d3d3;
+}
+
+.land:first-child {
+  font-size: 3rem;
+  font-style: italic;
+  font-weight: 800;
+}
+
+.entry,
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+  gap: 0.5em;
+  margin-top: 0.5em;
+  padding: 0.5em;
+}
+
+.land button,
+.land input {
+  width: 100%;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 1em;
+  padding: 0.5em;
+  box-shadow: 2px 2px 3px black;
+}
+
+.land button:hover {
+  cursor: pointer;
+  background-color: #cfcfcc;
+  transition: background-color 1s linear;
+}

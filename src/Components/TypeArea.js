@@ -4,25 +4,31 @@ import { TESTS } from "../variables";
 import Countdown from "./Countdown";
 import { useContext } from "react/cjs/react.development";
 import { WordsContext } from "./ContextProvider";
+import { useSocket } from "../context/SocketProvider";
 
 const TypeArea = ({ checkComplete }) => {
   const textAreaRef = useRef();
   const [isStarted, setIsStarted] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const [isDone, setIsDone] = useState(false);
+  const socket = useSocket();
 
   const { words, setWords } = useContext(WordsContext);
 
   useEffect(() => {
-    setWords({
-      ...words,
-      expectedWords: TESTS[Math.floor(Math.random() * TESTS.length)],
-    });
-  }, []);
+    if (socket == null) return;
 
-  useEffect(() => {
-    if (isStarted) textAreaRef.current.setSelectionRange(0, 0);
-  }, [isStarted]);
+    socket.on("started", () => {
+      setIsClicked(true);
+      if (textAreaRef !== null) textAreaRef.current.focus();
+      setWords({
+        ...words,
+        expectedWords: TESTS[Math.floor(Math.random() * TESTS.length)],
+      });
+    });
+
+    return () => socket.off("started");
+  }, [socket, isClicked]);
 
   const letsStart = () => {
     setIsStarted(true);
@@ -55,14 +61,6 @@ const TypeArea = ({ checkComplete }) => {
           setWords({ ...words, typedWords: e.target.value });
         }}
       />
-      <button
-        onClick={(e) => {
-          e.preventDefault();
-          setIsClicked(true);
-          textAreaRef.current.focus();
-        }}>
-        Let's Start
-      </button>
     </div>
   );
 };

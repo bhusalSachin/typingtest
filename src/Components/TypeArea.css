@@ -31,7 +31,10 @@
 }
 
 .typewords {
-  padding: 0.7em;
+  padding: 0.3em;
+}
+
+.typewords p {
   font-size: 1.1rem;
   color: rgb(155, 106, 106);
   user-select: none;
