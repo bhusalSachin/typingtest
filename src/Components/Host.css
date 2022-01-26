@@ -55,6 +55,11 @@
   transition: background-color 1s linear;
 }
 
+.host-body div:last-child {
+  font-size: 1.2rem;
+  color: rgb(121, 52, 52);
+}
+
 .host-side {
   height: 100%;
   width: 20%;

@@ -16,18 +16,9 @@ const Result = ({ roomId, username }) => {
   let noOfChar = 0;
   const timeTaken = 30;
   let count = 0;
-
-  console.log(expectedCharArray);
-
   charArray.forEach((array, indx) => {
     array.forEach((char, index) => {
       noOfChar++;
-
-      // console.log(
-      //   "comparing " + char,
-      //   " with " + expectedCharArray[indx][index]
-      // );
-
       if (char === expectedCharArray[indx][index]) {
         count++;
       }
