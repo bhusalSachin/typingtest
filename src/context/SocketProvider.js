@@ -15,7 +15,7 @@ export const SocketProvider = ({ id, children }) => {
     //   transports: ["websocket"],
     //   query: { id },
     // });
-    const newSocket = io("ws://typingtestserver.herokuapp.com/", {
+    const newSocket = io("wss://typingtestserver.herokuapp.com/", {
       transports: ["websocket"],
       query: { id },
     });
