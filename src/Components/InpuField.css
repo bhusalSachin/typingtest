@@ -1,0 +1,23 @@
+.inputfield {
+  width: 100%;
+  border: none;
+  border-radius: 1em;
+  box-shadow: 2px 2px 3px black;
+  margin-top: 0.5em;
+}
+
+.inputfield input {
+  border: none;
+  border-radius: 1em;
+  width: 100%;
+  padding: 0.4em;
+  offset: none;
+  background-color: transparent;
+  font-size: 1.1rem;
+}
+
+.inputfield input:active,
+.inputfield input:focus {
+  border: none;
+  offset: none;
+}

@@ -39,7 +39,7 @@ const Result = ({ roomId, username }) => {
     setTimeout(() => {
       socket.emit("testcomplete", { roomId, username, wpm, accuracy });
     }, 5000);
-  });
+  }, [socket]);
 
   return (
     <div className="result">
@@ -54,13 +54,6 @@ const Result = ({ roomId, username }) => {
         wpm
       </span>
       <span>Accuracy: {accuracy}%</span>
-      {/* <button
-        onClick={(e) => {
-          e.preventDefault();
-          checkComplete();
-        }}>
-        Retake Test
-      </button> */}
     </div>
   );
 };

@@ -5,15 +5,21 @@
   align-items: center;
   justify-content: space-between;
   background-color: #d3d3d3;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.player::-webkit-scrollbar {
+  display: none;
 }
 
 .player-body {
   height: 100%;
   flex: 1;
-  border: 1px solid green;
   display: flex;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .player-body div:first-child {
@@ -26,6 +32,4 @@
 .player-side {
   height: 100%;
   width: 20%;
-  border: 1px solid black;
-  box-shadow: 1px 5px 4px 6px black;
 }

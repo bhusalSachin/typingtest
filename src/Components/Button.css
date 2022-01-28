@@ -1,0 +1,41 @@
+.button {
+  width: 100%;
+  padding: 0.2em;
+  box-shadow: 0.1em 0.1em 0.2em 0.3em rgb(155, 106, 106);
+  border-radius: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 500ms ease-in-out;
+}
+
+.button button {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  offset: none;
+  background-color: transparent;
+  padding: 0.2em;
+  color: rgb(121, 52, 52);
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.button button:hover {
+  transform: scale(1.1);
+}
+
+.infoMsg {
+  font-size: 1rem;
+  font-style: italic;
+  position: sticky;
+  left: 60%;
+  padding: 0.3em;
+  display: none;
+}
+
+.shoeInfo {
+  display: block;
+}

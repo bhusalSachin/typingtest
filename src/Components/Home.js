@@ -25,7 +25,7 @@ const Home = ({ roomId, username }) => {
   return (
     <div className="home">
       <div className="header">
-        <h1>{username}</h1>
+        <span>Hello! {username}</span>
       </div>
       <WordsContext.Provider value={{ words, setWords }}>
         <div className="middle">

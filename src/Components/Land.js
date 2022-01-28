@@ -21,7 +21,7 @@ const Land = ({ onRoomEntry }) => {
   const joinRoomRequest = async (e) => {
     e.preventDefault();
 
-    // console.log("submitting....");
+    console.log("submitting....");
     // const response = await axios.post("http://localhost:5000/checkId", {
     //   roomId: input.id,
     //   username: input.username,

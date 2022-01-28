@@ -1,0 +1,24 @@
+.arrowIcon {
+  border: 2px solid rgb(121, 52, 52);
+  border-radius: 50%;
+  color: rgb(121, 52, 52);
+  box-shadow: 0em 0em 0.1em 0.3em rgb(155, 106, 106);
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  background-color: #d3d3d3;
+  cursor: pointer;
+  transition: transform 500ms ease-in-out;
+}
+
+.arrowIcon:hover {
+  transform: scale(1.1);
+}
+
+.leaderArrow {
+  right: -5%;
+}
+
+.notificationArrow {
+  left: -5%;
+}

@@ -18,12 +18,13 @@ const TypeArea = ({ checkComplete }) => {
   useEffect(() => {
     if (socket == null) return;
 
-    socket.on("started", () => {
+    socket.on("started", (text) => {
       setIsClicked(true);
       if (textAreaRef !== null) textAreaRef.current.focus();
       setWords({
         ...words,
-        expectedWords: TESTS[Math.floor(Math.random() * TESTS.length)],
+        // expectedWords: TESTS[Math.floor(Math.random() * TESTS.length)],
+        expectedWords: text,
       });
     });
 

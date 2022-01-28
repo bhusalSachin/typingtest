@@ -5,54 +5,58 @@
   align-items: center;
   justify-content: space-between;
   background-color: #d3d3d3;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.host::-webkit-scrollbar {
+  display: none;
 }
 
 .host-body {
   height: 100%;
   flex: 1;
-  border: 1px solid green;
   display: flex;
   align-items: center;
   flex-direction: column;
+  gap: 1em;
 }
 
-.host-body div:first-child {
+.host-title {
+  padding: 0.4em;
   font-size: 3rem;
   font-style: italic;
-  font-weight: 800;
-  text-decoration: underline;
+  border-bottom: 2px solid rgb(121, 52, 52);
+  border-radius: 3em;
   color: rgb(121, 52, 52);
 }
 
-.host-body .info {
-  width: 40%;
+.host-body .roomid {
+  width: 100%;
   height: auto;
-  align-self: flex-end;
-  padding: 0.5em;
-  margin-top: 2em;
-}
-
-.host-body .info div:last-child {
-  color: rgb(121, 52, 52);
-  font-size: 1.1rem;
-  padding: 0.2em;
   text-align: center;
-  line-height: 1.75;
+  padding: 0.5em;
+  margin-top: 0.2em;
 }
 
-.host-body button {
-  width: 80%;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 1em;
-  padding: 0.2em;
-  box-shadow: 2px 2px 3px black;
+.roomid span {
+  color: rgb(155, 106, 106);
 }
 
-.host-body button:hover {
-  cursor: pointer;
-  background-color: #cfcfcc;
-  transition: background-color 1s linear;
+.onStartButton {
+  width: 40%;
+}
+
+.onAlertButton {
+  width: 40%;
+}
+
+.alertForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
 }
 
 .host-body div:last-child {
@@ -63,6 +67,4 @@
 .host-side {
   height: 100%;
   width: 20%;
-  border: 1px solid black;
-  box-shadow: 1px 5px 4px 6px black;
 }

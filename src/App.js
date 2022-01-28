@@ -7,7 +7,6 @@ import { SocketProvider } from "./context/SocketProvider";
 import DashBoard from "./Components/DashBoard";
 
 function App() {
-  // const [id, setId] = useState(null);
   const [onRoomEntry, setOnRoomEntry] = useState({
     id: null,
     isPlayer: false,
@@ -15,8 +14,8 @@ function App() {
   });
 
   const host = (
-    <SocketProvider id={onRoomEntry.id}>
-      <DashBoard onRoomEntry={onRoomEntry} />
+    <SocketProvider user={onRoomEntry.username} id={onRoomEntry.id}>
+      <DashBoard onRoomEntry={onRoomEntry} onRoomDisbound={setOnRoomEntry} />
     </SocketProvider>
   );
 
