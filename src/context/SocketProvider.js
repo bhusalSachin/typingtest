@@ -16,14 +16,14 @@ export const SocketProvider = ({ user, id, children }) => {
     //   query: { id },
     // });
 
-    // const newSocket = io("http://localhost:5000/", {
-    //   transports: ["websocket"],
-    //   query: { user, id },
-    // });
-    const newSocket = io("wss://typingtestserver.herokuapp.com/", {
+    const newSocket = io("http://localhost:5000/", {
       transports: ["websocket"],
       query: { user, id },
     });
+    // const newSocket = io("wss://typingtestserver.herokuapp.com/", {
+    //   transports: ["websocket"],
+    //   query: { user, id },
+    // });
 
     setSocket(newSocket);
 

@@ -15,11 +15,11 @@ function Tab({ text, isNotification }) {
       if (text === username) setStats({ wpm: netWpm, accuracy: netAccuracy });
       else return;
     });
-    socket.on("updatedleader", (players, player) => {
-      if (player.username === text)
-        setStats({ wpm: player.netWpm, accuracy: player.netAccuracy });
-      else return;
-    });
+    // socket.on("updatedleader", (players, player) => {
+    //   if (player.username === text)
+    //     setStats({ wpm: player.netWpm, accuracy: player.netAccuracy });
+    //   else return;
+    // });
   }, [socket, stats, text]);
 
   const notificastion = <span>{text}</span>;

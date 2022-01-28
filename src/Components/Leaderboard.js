@@ -19,14 +19,14 @@ function Leaderboard() {
       setPlayers(allusers);
     });
 
-    socket.on("updatedleader", (players, player) => setPlayers(players));
+    // socket.on("updatedleader", (players, player) => setPlayers(players));
   }, [socket, players]);
   return (
     <div className={`leader ${isHide && "reduce"}`}>
       <div className={`leader-title ${isHide && "hide"}`}>Leaderboard</div>
       <div className={`players ${isHide && "hide"}`}>
         {players.map((player, indx) => (
-          <Tab key={indx} player={player} text={player.username} />
+          <Tab key={indx} text={player.username} />
         ))}
       </div>
       <ArrowIcon toggleBar={setIsHide} />

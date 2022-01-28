@@ -22,17 +22,17 @@ const Land = ({ onRoomEntry }) => {
     e.preventDefault();
 
     console.log("submitting....");
-    // const response = await axios.post("http://localhost:5000/checkId", {
-    //   roomId: input.id,
-    //   username: input.username,
-    // });
-    const response = await axios.post(
-      "https://typingtestserver.herokuapp.com/checkId",
-      {
-        roomId: input.id,
-        username: input.username,
-      }
-    );
+    const response = await axios.post("http://localhost:5000/checkId", {
+      roomId: input.id,
+      username: input.username,
+    });
+    // const response = await axios.post(
+    //   "https://typingtestserver.herokuapp.com/checkId",
+    //   {
+    //     roomId: input.id,
+    //     username: input.username,
+    //   }
+    // );
 
     if (response.data.success) {
       console.log(response.data.message);

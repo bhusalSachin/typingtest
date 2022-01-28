@@ -23,7 +23,6 @@ const TypeArea = ({ checkComplete }) => {
       if (textAreaRef !== null) textAreaRef.current.focus();
       setWords({
         ...words,
-        // expectedWords: TESTS[Math.floor(Math.random() * TESTS.length)],
         expectedWords: text,
       });
     });
